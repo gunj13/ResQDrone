@@ -12,7 +12,8 @@
             font-family: 'Merriweather';
             font-weight: 700;
         }
-        body {
+        body 
+         {
             margin: 0;
             font-family: 'Merriweather';
             font-weight: 400;
@@ -29,6 +30,7 @@
             padding: 30px;
             border-radius: 10px;
             display: flex;
+            flex-direction: right;
             justify-content: space-between;
             align-items: center;
         }
@@ -46,6 +48,7 @@
 
         .logo {
             margin-right: auto;
+            
         }
 
         nav {
@@ -57,10 +60,6 @@
             text-decoration: none;
             color: #000000;
             transition: color 0.2s;
-        }
-
-        .nav-link:hover {
-            color: #090081;
         }
 
         #contact,
@@ -116,6 +115,10 @@
                 margin-left: 10px;
             }
         }
+
+        #globe:hover span {
+            color: #fff; /* Change color on hover */
+        }
     </style>
 </head>
 
@@ -124,7 +127,8 @@
     <header class="mx-4">
 
         <div class="logo">
-            <img src="logo.png" alt="Logo" width="50">
+            <p><img src="logo.png" alt="Logo" width="50"></p>
+
         </div>
         <nav>
             <a href="index.html" class="nav-link">Home</a>
