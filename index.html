@@ -1,114 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ResQDrone</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-image: url('image.jpeg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-    header {
-      background-color: rgba(255, 255, 255, 0.5);
-      color: #fff;
-      margin-top: 20px;
-      padding: 30px;
-      border-radius: 10px;
-      display: flex;/*flexible gap between text*/
-      justify-content: space-between;
-      align-items: center;
-    }
-    header:hover 
-    {
-      background-color: #000000;
-    }
-    header:hover .nav-link,header:hover #contact,header:hover #support,header:hover span 
-    {
-      color: rgba(255, 255, 255, 0.75); 
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SARD</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Merriweather:700|Merriweather:400');
+        h1, h2, h3, h4, h5 {
+        font-family: 'Merriweather';
+        font-weight: 700;
+        }
+        body {
+            font-family: 'Merriweather';
+            font-weight: 400;
+            margin: 0;
+            background-image: url('image.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        html {font-size: 100%;} /* 16px */
 
-    .logo {
-      margin-right: auto;
-    }
-    nav {
-      display: flex;
-      gap: 50px; /*gap between text*/
-    }
-    .nav-link {
-      text-decoration: none;
-      color: #000000;
-      transition: color 0.2s; 
-    }
-    .nav-link:hover {
-      color: #090081; /* Change text color on hover */
-    }
-    #contact, #support {
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      margin-left: 30px;
-      padding: 15px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    main {
-      margin-top: 100px;
-      padding-left: 200px; /*padding for the gap */
-      text-align: left;
-    }
-    h1 {
-      font-size: 75px;
-      color: #dcdcdc;
-    }
-    h3 {
-    font-family: 'Times New Roman', Times, serif;
-      font-size: 24px;
-      color: #242323;
-    }
+        h1 {font-size: 4.210rem; /* 67.36px */}
 
-  </style>
+        h2 {font-size: 3.158rem; /* 50.56px */}
+
+        h3 {font-size: 2.369rem; /* 37.92px */}
+
+        h4 {font-size: 1.777rem; /* 28.48px */}
+
+        h5 {font-size: 1.333rem; }
+
+        small {font-size: 0.750rem;}
+
+        header {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #fff;
+            margin-top: 20px;
+            padding: 30px;
+            border-radius: 10px;
+            display: flex;
+            /*flexible gap between text*/
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header:hover {
+            background-color: #000000;
+        }
+
+        header:hover .nav-link,
+        header:hover #contact,
+        header:hover #support,
+        header:hover span {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .logo {
+            margin-right: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 50px;
+            /*gap between text*/
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #000000;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: #090081;
+            /* Change text color on hover */
+        }
+
+        #contact,
+        #support {
+            background-color: #4e644a;
+            color: #fff;
+            border: none;
+            margin-left: 30px;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        main {
+            margin-top: 100px;
+            padding-left: 200px;
+            /*padding for the gap */
+            text-align: left;
+        }
+
+        h1 {
+            color: #dcdcdc;
+        }
+
+        h3 {
+            color: #242323;
+        }
+    </style>
 </head>
+
 <body>
 
-<header class="mx-4">
-     
-  <div class="logo">
-    <img src="logo.png" alt="Logo" width="50">
-  </div>
-  <nav>
-    <a href="index.html" class="nav-link" >Home</a>
-    <a href="#" class="nav-link" >Products</a>
-    <a href="aboutus.html" class="nav-link" >About Us</a>
-  </nav>
+    <header class="mx-4">
 
-  <div class="col text-right">
-    <button id="contact">Contact Us</button>
-    <button id="support">Get Support</button>
-  </div>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" width="50">
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Products</a>
+            <a href="aboutus.html" class="nav-link">About Us</a>
+            <a href="#" class="nav-link">Resources</a>
+            <a href="#" class="nav-link">Company</a>
+        </nav>
 
-  <div id="globe">
-    <img src="globe.png" alt="Globe" width="20">
-    <span>India</span>
-  </div>
+        <div class="col text-right">
+            <div><button id="contact">Contact Us</button></div>
+            <div><button id="support">Get Support</button></div>
+            
+            
+        </div>
 
-</header>
+        <div id="globe">
+            <img src="globe.png" alt="Globe" width="20">
+            <span>India</span>
+        </div>
 
-<main>
-  <div>
-    
-    <h3><b>Public Safety: Search and Rescue Drones</b></h3>
-    <h1><b>Search Large Areas</b></h1>
-    <h1><b>& Save Lives</b></h1>
-    <h3><b>With an Airborne Perspective</b></h3>
-  </div>
+    </header>
 
-</main>
+    <main>
+        <div>
+
+            <h3><b>Public Safety: Search and Rescue Drones</b></h3>
+            <h1><b>Search Large Areas</b></h1>
+            <h1><b>& Save Lives</b></h1>
+            <h3><b>With an Airborne Perspective</b></h3>
+        </div>
+
+    </main>
 
 </body>
+
 </html>
