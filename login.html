@@ -30,7 +30,7 @@
             padding: 30px;
             border-radius: 10px;
             display: flex;
-            /*flexible gap between text*/
+            flex-direction: right;
             justify-content: space-between;
             align-items: center;
         }
@@ -48,24 +48,18 @@
 
         .logo {
             margin-right: auto;
-            width: 30px;
+            
         }
 
         nav {
             display: flex;
             gap: 50px;
-            /*gap between text*/
         }
 
         .nav-link {
             text-decoration: none;
             color: #000000;
             transition: color 0.2s;
-        }
-
-        .nav-link:hover {
-            color: #090081;
-            /* Change text color on hover */
         }
 
         #contact,
@@ -78,7 +72,6 @@
             border-radius: 5px;
             cursor: pointer;
         }
-
 
         .container {
             width: 70%;
@@ -155,14 +148,13 @@
     <header class="mx-4">
 
         <div class="logo">
-            <img src="logo.png" alt="Logo" width="50">
+            <p><img src="logo.png" alt="Logo" width="50"></p>
+
         </div>
         <nav>
             <a href="index.html" class="nav-link">Home</a>
             <a href="#" class="nav-link">Products</a>
             <a href="aboutus.html" class="nav-link">About Us</a>
-            <a href="#" class="nav-link">Resources</a>
-            <a href="#" class="nav-link">Company</a>
         </nav>
 
         <div class="col text-right">
