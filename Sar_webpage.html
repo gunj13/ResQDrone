@@ -4,15 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SARD</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body 
-    {
+    body {
       margin: 70;
       background-color: bisque;
       font-family: Arial, sans-serif;
     }
-    header 
-    {
+    header {
       background-color: rgba(255, 255, 255, 0.5);
       margin-top: 20px;
       padding: 30px;
@@ -21,28 +20,21 @@
       justify-content: space-between;
       align-items: center;
     }
-    header:hover 
-    {
+    header:hover {
       background-color: #fff;
     }
-    .logo 
-    {
+    .logo {
       margin-right: auto;
     }
-    nav 
-    {
-      display: flex;    
+    nav {
+      display: flex;
       gap: 50px; /*gap between text*/
     }
-
-    .nav-link 
-    {
+    .nav-link {
       text-decoration: none;
       color: #000;
     }
-
-    #contact, #support 
-    {
+    #contact, #support {
       background-color: #007bff;
       color: #fff;
       border: none;
@@ -51,36 +43,36 @@
       border-radius: 5px;
       cursor: pointer;
     }
-    #globe 
-    {
+    #globe {
       margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    main 
-    {
-        margin-top: 100px;
-        padding-left: 200px; /*padding for the gap */
-        text-align: left;
+    main {
+      margin-top: 100px;
+      padding-left: 200px; /*padding for the gap */
+      text-align: left;
     }
-    h3
-    {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 24px;
+    h3 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 24px;
     }
-    h1
-    {
-        font-size: 75px;
+    h1 {
+      font-size: 75px;
       color: #888;
     }
-    h2 
-    {
+    h2 {
       font-size: 24px;
       color: #888;
     }
+
   </style>
 </head>
 <body>
 
-<header>
+<header class="mx-4">
+     
   <div class="logo">
     <img src="logo.png" alt="Logo" width="50">
   </div>
@@ -91,12 +83,19 @@
     <a href="#" class="nav-link">Resources</a>
     <a href="#" class="nav-link">Company</a>
   </nav>
-  <button id="contact">Contact</button>
-  <button id="support">Support</button>
+
+  <div class="col text-right">
+    <button id="contact">Contact</button>
+    <button id="support">Support</button>
+  </div>
+
   <div id="globe">
     <img src="globe.png" alt="Globe" width="20">
     <span>India</span>
   </div>
+
+  
+
 </header>
 
 <main>
@@ -106,8 +105,18 @@
     <h1>& Save Lives</h1>
     <h3>With an Airborne Perspective</h3>
   </div>
+
+  <h1>WHY US</h1>
+    <br>
+    <br>
+    <br>
+    <br><br><br><br><br><br><br>
+    <p>
+    Welcome to the website of SARD, 
+    a non-profit organization dedicated to utilizing drone technology for search and rescue operations in the wake of disasters.
+    We believe that every second counts when lives are on the line, and our mission is to leverage the power of drones to expedite rescue efforts and save precious lives.
+  </p>
 </main>
 
 </body>
 </html>
-
