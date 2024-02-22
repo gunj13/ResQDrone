@@ -6,35 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SARD</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
     <style>
         @import url('https://fonts.googleapis.com/css?family=Merriweather:700|Merriweather:400');
         h1, h2, h3, h4, h5 {
-        font-family: 'Merriweather';
-        font-weight: 700;
+            font-family: 'Merriweather';
+            font-weight: 700;
         }
         body {
+            margin: 0;
             font-family: 'Merriweather';
             font-weight: 400;
-            margin: 0;
             background-image: url('image.jpeg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
-        html {font-size: 100%;} /* 16px */
-
-        h1 {font-size: 4.210rem; /* 67.36px */}
-
-        h2 {font-size: 3.158rem; /* 50.56px */}
-
-        h3 {font-size: 2.369rem; /* 37.92px */}
-
-        h4 {font-size: 1.777rem; /* 28.48px */}
-
-        h5 {font-size: 1.333rem; }
-
-        small {font-size: 0.750rem;}
 
         header {
             background-color: rgba(255, 255, 255, 0.5);
@@ -43,7 +29,6 @@
             padding: 30px;
             border-radius: 10px;
             display: flex;
-            /*flexible gap between text*/
             justify-content: space-between;
             align-items: center;
         }
@@ -66,7 +51,6 @@
         nav {
             display: flex;
             gap: 50px;
-            /*gap between text*/
         }
 
         .nav-link {
@@ -77,12 +61,11 @@
 
         .nav-link:hover {
             color: #090081;
-            /* Change text color on hover */
         }
 
         #contact,
         #support {
-            background-color: #4e644a;
+            background-color: #007bff;
             color: #fff;
             border: none;
             margin-left: 30px;
@@ -94,16 +77,44 @@
         main {
             margin-top: 100px;
             padding-left: 200px;
-            /*padding for the gap */
             text-align: left;
         }
 
         h1 {
+            font-size: 75px;
             color: #dcdcdc;
         }
 
         h3 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
             color: #242323;
+        }
+
+        /* Media Query for Responsive Layout */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .col.text-right {
+                margin-top: 10px;
+            }
+
+            #globe {
+                margin-top: 10px;
+            }
+
+            #contact,
+            #support {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            #support {
+                margin-left: 10px;
+            }
         }
     </style>
 </head>
@@ -122,10 +133,8 @@
         </nav>
 
         <div class="col text-right">
-            <div><button id="contact">Contact Us</button></div>
-            <div><button id="support">Get Support</button></div>
-            
-            
+            <button id="contact">Contact Us</button>
+            <button id="support">Get Support</button>
         </div>
 
         <div id="globe">
