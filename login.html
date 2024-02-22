@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up / Login</title>
+    <style>
+        body {
+            font-family: 'Merriweather';
+            font-weight: 400;
+            margin: 0;
+            padding:0;
+            
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('image.jpeg')
+        }
+        @import url('https://fonts.googleapis.com/css?family=Merriweather:700|Merriweather:400');
+        h1, h2, h3, h4, h5 {
+        font-family: 'Merriweather';
+        font-weight: 700;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #fff;
+            margin-top: 20px;
+            padding: 30px;
+            border-radius: 10px;
+            display: flex;
+            /*flexible gap between text*/
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header:hover {
+            background-color: #000000;
+        }
+
+        header:hover .nav-link,
+        header:hover #contact,
+        header:hover #support,
+        header:hover span {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .logo {
+            margin-right: auto;
+            width: 30px;
+        }
+
+        nav {
+            display: flex;
+            gap: 50px;
+            /*gap between text*/
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #000000;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: #090081;
+            /* Change text color on hover */
+        }
+
+        #contact,
+        #support {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            margin-left: 30px;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        .container {
+            width: 70%;
+            display: flex;
+            padding-left: 220px;
+        }
+
+        .image {
+            width: 30%;
+            background-image: url('reg.png');
+            background-size: cover;
+            background-position: left;
+        }
+
+        .form-container {
+            width: 70%;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select {
+            margin-bottom: 10px;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .google {
+            background-color: rgb(50, 165, 50);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .google:hover {
+            background-color: rgb(55, 224, 55);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="mx-4">
+
+        <div class="logo">
+            <img src="logo.png" alt="Logo" width="50">
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Products</a>
+            <a href="aboutus.html" class="nav-link">About Us</a>
+            <a href="#" class="nav-link">Resources</a>
+            <a href="#" class="nav-link">Company</a>
+        </nav>
+
+        <div class="col text-right">
+            <button id="contact">Contact Us</button>
+            <button id="support">Get Support</button>
+        </div>
+
+        <div id="globe">
+            <img src="globe.png" alt="Globe" width="20">
+            <span>India</span>
+        </div>
+
+    </header>
+    <br><br><br>
+
+
+
+    <div class="container">
+        <div class="image"></div>
+        <div class="form-container">
+            <h2>Sign Up / Login</h2>
+            <form id="signup-form" action="#" method="post">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <span id="email-error" class="error"></span>
+                <input type="date" name="dob" placeholder="Date of Birth" required>
+                <select name="nationality" required>
+                    <option value="">Select Nationality</option>
+                    <option value="USA">USA</option>
+                    <option value="India">UK</option>
+                    <option value="Canada">Canada</option>
+                </select>
+                <input type="submit" value="Sign Up">
+            </form>
+            <p>Or sign up with Google</p>
+            <img src="googleLogo.png" height="30vh">
+            <button class="google" onclick="signInWithGoogle()">Sign
+                up with Google</button>
+
+        </div>
+    </div>
+    <script>
+        function validateEmail() {
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
+            const email = emailInput.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailRegex.test(email)) {
+                emailError.textContent = 'Invalid email address';
+                return false;
+            } else {
+                emailError.textContent = '';
+                return true;
+            }
+        }
+
+        document.getElementById('signup-form').addEventListener('submit', function (event) {
+            if (!validateEmail()) {
+                event.preventDefault();
+            }
+        });
+
+        function signInWithGoogle() {
+            window.open('https://accounts.google.com/o/oauth2/auth?redirect_uri=YOUR_REDIRECT_URI&response_type=code&client_id=YOUR_CLIENT_ID&scope=openid%20email%20profile&access_type=offline', '_blank');
+            alert('Signing up with Google...');
+        }
+    </script>
+</body>
+
+</html>
