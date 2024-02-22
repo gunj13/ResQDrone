@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SARD</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', Times, serif;
+      background-image: url('image.jpeg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    header {
+        font-family: Arial, sans-serif;
+      background-color: rgba(255, 255, 255, 0.5);
+      color: #fff;
+      margin-top: 20px;
+      padding: 30px;
+      border-radius: 10px;
+      display: flex;/*flexible gap between text*/
+      justify-content: space-between;
+      align-items: center;
+    }
+    header:hover 
+    {
+      background-color: #000000;
+    }
+    header:hover .nav-link,header:hover #contact,header:hover #support,header:hover span 
+    {
+      color: rgba(255, 255, 255, 0.75); 
+    }
+
+    .logo {
+      margin-right: auto;
+    }
+    nav {
+      display: flex;
+      gap: 50px; /*gap between text*/
+    }
+    .nav-link {
+      text-decoration: none;
+      color: #000000;
+      transition: color 0.2s; 
+    }
+    .nav-link:hover {
+      color: #090081; /* Change text color on hover */
+    }
+    #contact, #support {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      margin-left: 30px;
+      padding: 15px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    main {
+      margin-top: 100px;
+      padding-left: 200px; /*padding for the gap */
+      text-align: left;
+    }
+    p{
+        color: #000000; 
+        text-align: center;
+    }
+    .about-box {
+    
+      background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+      padding: 20px;
+      border-radius: 25px; /* Rounded corners */
+      margin-right:125px;
+      width: 1200px;
+    }
+    .about-box h1 
+    {
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+<header class="mx-4">
+     
+  <div class="logo">
+    <img src="logo.png" alt="Logo" width="50">
+  </div>
+  <nav>
+    <a href="index.html" class="nav-link" >Home</a>
+    <a href="#" class="nav-link" >Products</a>
+    <a href="aboutus.html" class="nav-link" >About Us</a>
+    <a href="#" class="nav-link" >Resources</a>
+    <a href="#" class="nav-link" >Company</a>
+  </nav>
+
+  <div class="col text-right">
+    <button id="contact">Contact Us</button>
+    <button id="support">Get Support</button>
+  </div>
+
+  <div id="globe">
+    <img src="globe.png" alt="Globe" width="20">
+    <span>India</span>
+  </div>
+
+</header>
+
+<main>
+    <div class="about-box">
+        <h1><b>ABOUT US</b></h1>
+        <hr>
+        <p>
+        Welcome to the website of SARD, 
+        a non-profit organization dedicated to utilizing drone technology for search and rescue operations in the wake of disasters.<br>
+        We believe that every second counts when lives are on the line, and our mission is to leverage the power of drones to expedite rescue efforts and save precious lives.<br>
+        Disasters often strike across vast and challenging terrains, making traditional search and rescue efforts arduous and time-consuming. <br>
+        Our drones provide an aerial perspective, allowing us to cover large areas quickly and efficiently, significantly increasing the chances of locating survivors in critical timeframes.<br>
+        Our drones are equipped with advanced automation features, including thermal imaging and object recognition capabilities.<br> 
+        These features allow them to autonomously search for survivors, reducing human error and fatigue while maximizing search efficiency, especially in hazardous environments.<br>
+        Our drones are equipped with real-time tracking systems, enabling us to monitor their location and progress remotely.<br> 
+        This allows for coordinated search efforts and ensures that rescue teams can be efficiently directed towards identified survivors.<br>
+        Explore our website to learn more about our work, our impact, and how you can get involved.
+
+        <br>
+        </p>
+    </div>
+
+</main>
+
+</body>
+</html>
