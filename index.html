@@ -110,15 +110,16 @@
                 margin-top: 10px;
             }
 
-            #contact,
-            #support {
-                margin-left: 0;
-                margin-top: 10px;
+            #contact, #support {
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                margin-left: 30px;
+                padding: 15px 20px;
+                border-radius: 5px;
+                cursor: pointer;
             }
 
-            #support {
-                margin-left: 10px;
-            }
         }
 
         #globe:hover span {
@@ -191,6 +192,20 @@
             transition: color 0.3s;
             color: #000000;
         }
+        h5{
+            text-align: center;
+        }
+        .thermal{
+            margin-left: 25%;
+        }
+        .contactus{
+            text-align: center;
+            margin-left: 30%;
+        }
+        .followus{
+            text-align: center;
+            margin-left: 75%;
+        }
     </style>
 </head>
 
@@ -207,7 +222,7 @@
         <nav>
             <a href="index.html" class="nav-link">Home</a>
             <a href="responsive_booking.html" class="nav-link">Products</a>
-            <a href="#AboutUs" class="nav-link">About Us</a>
+            <a href="#" class="nav-link">About Us</a>
         </nav>
 
         <div class="col text-right">
@@ -266,7 +281,7 @@
             </p>
         </div>
 
-        <p id="features">CUT RESPONSE
+        <!-- <p id="features">CUT RESPONSE
             TIME BY
             50%</p>
         <p id="features">INCREASE AREA
@@ -277,13 +292,13 @@
                 75%</p>
         <p>Thermal Image Person Detection</p>
         <img src="thermalsample.png" height="30%">
+        </section> -->
+        <h5 style="color: wheat;">Thermal Image Person Detection</h5>
+        <img class="thermal" src="thermalsample.png" height="30%">
         </section>
 
-   
-    
-
     <footer>
-        <div>
+        <div class="contactus">
             <h3 style="color: #dcdcdc;">Contact Us</h3>
             <hr>
             <p>123 Drone Street, Search and Rescue City</p>
@@ -291,6 +306,8 @@
             <p>Phone: +1 (123) 456-7890</p>
             <p>Email: <a href="mailto:info@searchrescuedrones.com">info@searchrescuedrones.com</a></p>
         </div>
+        <div>
+
         <div>
             <h3 style="color: #dadada;">Follow Us & stay updated with our latest missions and operations</h3>
             <hr>
