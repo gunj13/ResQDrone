@@ -4,24 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SARD</title>
+    <title>ResQDrone</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Merriweather:700|Merriweather:400');
-        h1, h2, h3, h4, h5 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
             font-family: 'Merriweather';
             font-weight: 700;
         }
+
         body {
             margin: 0;
             font-family: 'Merriweather';
             font-weight: 400;
-            background-image: url('image.jpeg');
+            background-image: url('max-bottinger-fEIjWVP_Xjc-unsplash.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            min-height: 100vh; /* Ensure full height */
-            position: relative; /* Required for footer positioning */
         }
 
         header {
@@ -86,21 +90,73 @@
             color: #dcdcdc;
         }
 
-        h4 {
+        h3 {
             font-family: 'Times New Roman', Times, serif;
             font-size: 24px;
-            color: #242323;
+            color: white;
+        }
+
+        /* Media Query for Responsive Layout */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .col.text-right {
+                margin-top: 10px;
+            }
+
+            #globe {
+                margin-top: 10px;
+            }
+
+            #contact,
+            #support {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            #support {
+                margin-left: 10px;
+            }
+        }
+
+        #globe:hover span {
+            color: #fff;
+            /* Change color on hover */
+        }
+
+        p {
+            color: white;
+            text-align: center;
+        }
+
+        .content {
+            background-color: #000;
+            margin-top: 15%;
+        }
+
+        .AboutUs {
+            
+            border-radius: 25px;
+            text-align: left;
+            justify-content: left;
+            margin: 30%;
+            width: 50%;
+        }
+
+        .about-box h1 {
+            text-align: center;
         }
 
         footer {
             background-color: #000000;
             color: #fff;
             padding: 20px;
-            display: flex;
             justify-content: space-around;
-            position: absolute;
-            bottom: 0; /* Stick it to the bottom */
-            width: 100%; /* Full width */
+            width: 100%;
+            
         }
 
         footer div {
@@ -131,11 +187,10 @@
 </head>
 
 <body>
-
     <header class="mx-4">
 
         <div class="logo">
-            <p><img src="logo.png" alt="Logo" width="50"></p>
+            <p><img id="scrollpic" src="logo.png" alt="Logo" width="50"></p>
           </div>
         <div id="website-name">
               ResQDrone 
@@ -163,13 +218,44 @@
     <main>
         <div>
 
-            <h4><b>PUBLIC SAFETY:SEARCH AND RESCUE DRONES</b></h4>
+            <h3><b>Public Safety: Search and Rescue Drones</b></h3>
             <h1><b>Search Large Areas</b></h1>
             <h1><b>& Save Lives</b></h1>
-            <h4><b>WITH AN AIRBORNE PERSPECTIVE</b></h4>
+            <h3><b>With an Airborne Perspective</b></h3>
         </div>
 
+
     </main>
+    <hr>
+    <section class="content">
+        <div class="AboutUs">
+            <h1><b>ABOUT US</b></h1>
+            <hr>
+            <p>
+                Welcome to the website of SARD,
+                a non-profit organization dedicated to utilizing drone technology for search and rescue operations in
+                the wake of disasters.<br>
+                We believe that every second counts when lives are on the line, and our mission is to leverage the power
+                of drones to expedite rescue efforts and save precious lives.<br>
+                Disasters often strike across vast and challenging terrains, making traditional search and rescue
+                efforts arduous and time-consuming. <br>
+                Our drones provide an aerial perspective, allowing us to cover large areas quickly and efficiently,
+                significantly increasing the chances of locating survivors in critical timeframes.<br>
+                Our drones are equipped with advanced automation features, including thermal imaging and object
+                recognition capabilities.<br>
+                These features allow them to autonomously search for survivors, reducing human error and fatigue while
+                maximizing search efficiency, especially in hazardous environments.<br>
+                Our drones are equipped with real-time tracking systems, enabling us to monitor their location and
+                progress remotely.<br>
+                This allows for coordinated search efforts and ensures that rescue teams can be efficiently directed
+                towards identified survivors.<br>
+                Explore our website to learn more about our work, our impact, and how you can get involved.
+
+                <br>
+            </p>
+        </div>
+        <br>
+    </section>
 
     <footer>
         <div>
@@ -197,7 +283,17 @@
           
         </div>
     </footer>
-
 </body>
+<script type="text/javascript">
+
+    const bg = document.getElementById('scrollpic');
+    window.addEventListener('scroll', function () {
+        <!--bg.style.backgroundSize = 160 - +window.pageYOffset/12 + '%';-->
+        const scrollAmount = window.pageYOffset;
+        const scaleFactor = 1 + scrollAmount / 15000; // Adjust the divisor for the desired zoom intensity
+        bg.style.backgroundSize = `${scaleFactor * 100}%`;
+
+    });
+</script>
 
 </html>
