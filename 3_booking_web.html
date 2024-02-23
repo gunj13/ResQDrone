@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Merriweather:700|Merriweather:400');
+        h1, h2, h3, h4, h5 {
+        font-family: 'Merriweather';
+        font-weight: 700;
+        }
+        body{
+            font-family: 'Merriweather';
+            font-weight: 400;
+            background-image: url('background.jpg');
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        .back{
+            background-size: 100 100;
+        }
+        .searchbox{
+            margin-top: 20px;
+            background-color: rgba();
+            padding: 20px;
+            border-radius: 30px;
+        }
+        .form-control{
+            height: 50px;
+            width: 75%;
+            background-color: rgb(142,178,136);
+            color: black;
+        }
+        .btn{
+            height: 50px;
+            width: 23%;
+            color: rgb(38, 38, 38);
+            background-color: white;
+            transition: transform 0.3s;
+        }
+        .btn:hover{
+            background-color:rgb(0,123,255) ;
+            transform: scale(1.05);
+        }
+        .mapped{
+            margin-left: 35%;
+        }
+        .Image{
+            margin-left: 42%;
+            height: 200px;
+            width: 200px;
+        }
+        .centre{
+            background-image: url("c:\Users\Vaibhav\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\28B5A122FA4651F8912ADE4A071AF35E\WhatsApp Image 2024-02-22 at 18.56.08_ad91f9c6.jpg");
+        }
+        .Prices{
+            display: flex;
+        }
+        .column {
+            display: flex;
+            flex-grow: 1; 
+            padding: 5px;
+            border: 1px solid #ccc;
+            height: 400px;
+            padding: 50px;
+            margin-left: 50px;
+            margin-right: 50px;
+            background-color: rgba(255, 255, 255, 0.5);
+            flex-direction: column;
+            border-radius: 20px;
+            justify-content: baseline;
+            transition: transform 0.3s;
+            margin-bottom: 50px;
+            color: white;
+        }
+        .column:hover{
+            background-color: black;
+            transform: scale(1.05);
+        }
+        .rowcol{
+            justify-content: center;
+        }
+        .pay{
+            height: 50px;
+            width:100px;
+            border-radius: 20px;
+            margin-left: 25%;
+        }
+        .pay:hover{
+            background-color: rgb(142,178,136);
+        }
+        ::placeholder{
+            font-size: 14px;
+            color: black;
+        }
+        iframe{
+            margin-left: 25%;
+        }
+        .logo {
+            margin-right: auto;
+            
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #fff;
+            margin-top: 20px;
+            padding: 30px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: right;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header:hover {
+            background-color: #000000;
+        }
+
+        header:hover .nav-link,
+        header:hover #contact,
+        header:hover #support,
+        header:hover span {
+            color: rgba(255, 255, 255, 0.75);
+        }
+        nav {
+            display: flex;
+            gap: 50px;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: #000000;
+            transition: color 0.2s;
+        }
+        #contact,
+        #support {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            margin-left: 30px;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+        
+    
+
+
+
+    </style>
+      <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
+</head>
+<body>
+    <header class="mx-4">
+
+        <div class="logo">
+            <p><img src="logo.png" alt="Logo" width="50"></p>
+
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Products</a>
+            <a href="aboutus.html" class="nav-link">About Us</a>
+        </nav>
+
+        <div class="col text-right">
+            <button id="contact">Contact Us</button>
+            <button id="support">Get Support</button>
+        </div>
+
+        <div id="globe">
+            <img src="globe.png" alt="Globe" width="20">
+            <span>India</span>
+        </div>
+
+    </header>
+    <br>
+    <br>
+    <br>
+    <div class="back">
+    <div class="Prices">
+        <div class="column">
+            <div class="rowcol"><h1>JOUAV CW-15$</h1></div>
+            <div class="rowcol">
+                <ul style="list-style-type: disc;">
+                    <li>180 minutes of flight time and a maximum payload of 3kg</li>
+                    <li>a high-definition 640 x 512 pixel thermal imaging camera
+                    </li>
+                </ul>
+            </div>
+            <div class="rowcol">
+                <button class="pay">RENT NOW</button>
+            </div>
+        </div>
+        <div class="column">
+            <div class="rowcol"><h1>JOUAV CW-<br>25$</h1></div>
+            <div class="rowcol">
+                <ul>
+                    <li>With 360 minutes of flight time and a cruising speed of 100km/h
+                    </li>
+                    <li>30x zoom high-resolution camera, a 640×512 px radiometric thermal camera.
+                    </li>
+                </ul>
+            </div>
+            <div class="rowcol">
+                <button class="pay">RENT NOW</button>
+            </div>
+        </div>
+        <div class="column">
+            <div class="rowcol"><h1>JOUAV CW-<br>30$</h1></div>
+            <div class="rowcol">
+                <ul style="list-style-type: disc;">
+                    <li>30x zoom high-resolution camera, a 640×512 px radiometric thermal camera.</li>
+                    <li>The CW-30E long range drone has a range of up to 200km.</li>
+                        <li>600 minutes of flight time.</li>
+                </ul>
+            </div>
+            <div class="rowcol">
+                <button class="pay">RENT NOW</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="searchbox">
+        <input type="text" id="userInput" class="form-control" placeholder="Enter Location">
+        <button class="btn" onclick="checkInput()"><h3>Search</h3></button>
+        <p id="result"></p>
+    
+    </div>
+      <script>
+        function checkInput() {
+            var input = document.getElementById("userInput").value;
+            switch (input.toLowerCase()) { // Convert input to lowercase for case-insensitive comparison
+                case "bangalore":
+                    document.getElementById("result").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.77490448696!2d77.30125374670206!3d12.954459543640922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1708602866402!5m2!1sen!2sin" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+                    break;
+                case "delhi":
+                    document.getElementById("result").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448193.9582180143!2d76.76285214719164!3d28.64428567128618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1708621925255!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+                    break;
+                case "mumbai":
+                    document.getElementById("result").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d482633.04405187786!2d72.55079927533538!3d19.082605573829845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1708621842894!5m2!1sen!2sin" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+                    break;
+                case "kolkata":
+                    document.getElementById("result").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471702.8477049808!2d87.75691451565642!3d22.534985287009533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1708621960896!5m2!1sen!2sin" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+                    break;
+                case "chennai":
+                    document.getElementById("result").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497511.23277670314!2d79.87862164197944!3d13.047985092935305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1708621982066!5m2!1sen!2sin" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+                    break;
+                case "pune":
+                    document.getElementById("result").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242117.70947881351!2d73.69780163918671!3d18.524870321856074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1708622006483!5m2!1sen!2sin" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+                    break;
+                default:
+                    document.getElementById("result").innerHTML = "Drones are not yet available at your location";
+            }
+        }
+    </script>
+     
+</body>
+</html>
