@@ -119,6 +119,52 @@
         #globe:hover span {
             color: #fff; /* Change color on hover */
         }
+        p{
+        color: #000000; 
+        text-align: center;
+    }
+    .about-box {
+      background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+      padding: 20px;
+      border-radius: 25px; /* Rounded corners */
+      text-align: center;
+      justify-content: center;
+      margin-left: 300px;
+      width: 50%;
+    }
+    .about-box h1 
+    {
+      text-align: center;
+    }
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        footer div {
+            width: 45%;
+        }
+
+        footer h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color:white;
+        }
+
+        footer p {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
     </style>
 </head>
 
@@ -127,7 +173,7 @@
     <header class="mx-4">
 
         <div class="logo">
-            <p><img src="logo.png" alt="Logo" width="50"></p>
+            <p><img id="scrollpic" src="logo.png" alt="Logo" width="50"></p>
 
         </div>
         <nav>
@@ -158,7 +204,54 @@
         </div>
 
     </main>
+    <hr>
+    
+    <div class="about-box">
+        <h1><b>ABOUT US</b></h1>
+        <hr>
+        <p>
+        Welcome to the website of SARD, 
+        a non-profit organization dedicated to utilizing drone technology for search and rescue operations in the wake of disasters.<br>
+        We believe that every second counts when lives are on the line, and our mission is to leverage the power of drones to expedite rescue efforts and save precious lives.<br>
+        Disasters often strike across vast and challenging terrains, making traditional search and rescue efforts arduous and time-consuming. <br>
+        Our drones provide an aerial perspective, allowing us to cover large areas quickly and efficiently, significantly increasing the chances of locating survivors in critical timeframes.<br>
+        Our drones are equipped with advanced automation features, including thermal imaging and object recognition capabilities.<br> 
+        These features allow them to autonomously search for survivors, reducing human error and fatigue while maximizing search efficiency, especially in hazardous environments.<br>
+        Our drones are equipped with real-time tracking systems, enabling us to monitor their location and progress remotely.<br> 
+        This allows for coordinated search efforts and ensures that rescue teams can be efficiently directed towards identified survivors.<br>
+        Explore our website to learn more about our work, our impact, and how you can get involved.
 
+        <br>
+        </p>
+    </div>
+    <br>
+
+    <footer>
+        <div>
+            <h3>Contact Us</h3>
+            <p>123 Drone Street, Search and Rescue City</p>
+            <p>Phone: +1 (123) 456-7890</p>
+            <p>Email: <a href="mailto:info@searchrescuedrones.com">info@searchrescuedrones.com</a></p>
+            <div>
+                <a href="https://www.instagram.com/searchrescuedrones" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/searchrescuedrones" target="_blank">Facebook</a>
+            </div>
+        </div>
+        <div>
+            <h3>Follow Us</h3>
+            <p>Stay updated with our latest missions and operations by following us on social media.</p>
+        </div>
+    </footer>
 </body>
+<script type="text/javascript">
 
+    const bg = document.getElementById('scrollpic');
+    window.addEventListener('scroll', function () {
+    <!--bg.style.backgroundSize = 160 - +window.pageYOffset/12 + '%';-->
+    const scrollAmount = window.pageYOffset;
+    const scaleFactor = 1 + scrollAmount / 15000; // Adjust the divisor for the desired zoom intensity
+    bg.style.backgroundSize = `${scaleFactor * 100}%`;
+  
+  });
+  </script>
 </html>
