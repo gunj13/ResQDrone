@@ -22,7 +22,7 @@
             margin: 0;
             font-family: 'Merriweather';
             font-weight: 400;
-            background-image: url('max-bottinger-fEIjWVP_Xjc-unsplash.jpg');
+            background-image: url('image.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -132,8 +132,10 @@
             text-align: center;
         }
 
+        .blackbg {
+            background-color: black;
+        }
         .content {
-            background-color: #000;
             margin-top: 15%;
         }
 
@@ -144,10 +146,17 @@
             justify-content: left;
             margin: 30%;
             width: 50%;
+            
         }
 
         .about-box h1 {
             text-align: center;
+        }
+        #features{
+            background-color: grey;
+            border-radius: 5px;
+            height: 10%;
+            width:5%;
         }
 
         footer {
@@ -198,13 +207,13 @@
 
         <nav>
             <a href="index.html" class="nav-link">Home</a>
-            <a href="#" class="nav-link">Products</a>
-            <a href="aboutus.html" class="nav-link">About Us</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="#AboutUs" class="nav-link">About Us</a>
         </nav>
 
         <div class="col text-right">
           
-            <button id="contact">Contact Us</button>
+            <a href="contact"></a><button id="contact">Contact Us</button>
             <button id="support">Get Support</button>
         </div>
 
@@ -227,6 +236,7 @@
 
     </main>
     <hr>
+    <section class="blackbg">
     <section class="content">
         <div class="AboutUs">
             <h1><b>ABOUT US</b></h1>
@@ -254,8 +264,22 @@
                 <br>
             </p>
         </div>
-        <br>
-    </section>
+
+        <p id="features">CUT RESPONSE
+            TIME BY
+            50%</p>
+        <p id="features">INCREASE AREA
+            COVERAGE BY
+            2X</p>
+        <p id="features">NCREASE RESCUE
+                SUCCESS RATE BY
+                75%</p>
+        <p>Thermal Image Person Detection</p>
+        <img src="thermalsample.png" height="30%">
+        </section>
+
+   
+    
 
     <footer>
         <div>
@@ -283,6 +307,8 @@
           
         </div>
     </footer>
+
+</section>
 </body>
 <script type="text/javascript">
 
