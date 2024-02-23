@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Merriweather:700|Merriweather:400');
+        h1, h2, h3, h4, h5 {
+            font-family: 'Merriweather';
+            font-weight: 700;
+        }
+        body {
+            font-family: 'Merriweather';
+            font-weight: 400;
+            background-image: url('background.jpg');
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+            padding: 0;
+        }
+        .back {
+            background-size: cover;
+            padding: 20px;
+        }
+        .searchbox {
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 30px;
+            text-align: center;
+        }
+        .form-control {
+            height: 50px;
+            width: 75%;
+            max-width: 400px;
+            background-color: rgb(142, 178, 136);
+            color: black;
+            border: none;
+            padding: 0 15px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .btn {
+            height: 50px;
+            width: 23%;
+            max-width: 120px;
+            color: rgb(38, 38, 38);
+            background-color: white;
+            transition: transform 0.3s;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: rgb(0, 123, 255);
+            transform: scale(1.05);
+        }
+        .Prices {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .column {
+            flex: 0 0 calc(33.333% - 20px);
+            margin: 10px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            transition: transform 0.3s;
+            text-align: center;
+            color: white;
+        }
+        .column:hover {
+            background-color: black;
+            transform: scale(1.05);
+        }
+        .rowcol {
+            margin-bottom: 10px;
+        }
+        .pay {
+            height: 40px;
+            width: 100px;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: rgb(142, 178, 136);
+            color: white;
+            border: none;
+        }
+        .pay:hover {
+            background-color: rgb(112, 148, 116);
+        }
+        ::placeholder {
+            font-size: 14px;
+            color: black;
+        }
+        iframe {
+            margin: 0 auto;
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        .logo img {
+            width: 50px;
+            height: auto;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header:hover {
+            background-color: #000000;
+        }
+        header:hover .nav-link,
+        header:hover #contact,
+        header:hover #support,
+        header:hover span {
+            color: rgba(255, 255, 255, 0.75);
+        }
+        nav {
+            flex: 1;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: #000000;
+            transition: color 0.2s;
+            margin: 0 10px;
+        }
+        #contact,
+        #support {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="mx-4">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#" class="nav-link">Products</a>
+            <a href="aboutus.html" class="nav-link">About Us</a>
+        </nav>
+        <div class="col text-right">
+            <button id="contact">Contact Us</button>
+            <button id="support">Get Support</button>
+        </div>
+        <div id="globe">
+            <img src="globe.png" alt="Globe" width="20">
+            <span>India</span>
+        </div>
+    </header>
+    <div class="back">
+        <div class="Prices">
+            <div class="column">
+                <div class="rowcol"><h1>DARSH<br>Rs.5199/-</h1></div>
+                <div class="rowcol">
+                    <ul style="list-style-type: disc;">
+                        <li>180 minutes of flight time and a maximum payload of 3kg</li>
+                        <li>a high-definition 640 x 512 pixel thermal imaging camera</li>
+                    </ul>
+                </div>
+                <div class="rowcol">
+                    <button class="pay">RENT NOW</button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="rowcol"><h1>NETRA<br>Rs.4999/-</h1></div>
+                <div class="rowcol">
+                    <ul>
+                        <li>With 360 minutes of flight time and a cruising speed of 100km/h</li>
+                        <li>30x zoom high-resolution camera, a 640×512 px radiometric thermal camera.</li>
+                    </ul>
+                </div>
+                <div class="rowcol">
+                    <button class="pay">RENT NOW</button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="rowcol"><h1>UDAAN<br>Rs.6999/-</h1></div>
+                <div class="rowcol">
+                    <ul style="list-style-type: disc;">
+                        <li>30x zoom high-resolution camera, a 640×512 px radiometric thermal camera.</li>
+                        <li>The CW-30E long range drone has a range of up to 200km.</li>
+                        <li>600 minutes of flight time.</li>
+                    </ul>
+                </div>
+                <div class="rowcol">
+                    <button class="pay">RENT NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="searchbox">
+        <input type="text" id="userInput" class="form-control" placeholder="Enter Location">
+        <button class="btn" onclick="checkInput()"><h3>Search</h3></button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function checkInput() {
+            var input = document.getElementById("userInput").value;
+            switch (input.toLowerCase()) { // Convert input to lowercase for case-insensitive comparison
+                case "bangalore":
+                    document.getElementById("result").innerHTML = '<iframe src="https://www.google.com/maps/d/u/0/embed?mid=17Pc97Z8HnQvWx396KJr_S-ycRxeaOUU&ehbc=2E312F" width="600" height="350"></iframe>';
+                    break;
+                case "delhi":
+                    document.getElementById("result").innerHTML = '<iframe src="https://www.google.com/maps/d/u/0/embed?mid=15njUmroNGJt3JWE0TK9rIQxADbGG8VM&ehbc=2E312F" width="600" height="350"></iframe>';
+                    break;
+                case "mumbai":
+                    document.getElementById("result").innerHTML = '<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1WPaWAev7Ml5CKQsWKJpolnZWO2rtVfo&ehbc=2E312F" width="600" height="350"></iframe>';
+                    break;
+                case "kolkata":
+                    document.getElementById("result").innerHTML = '<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1_mDYQE6Nn3f60-l0C85AIpiyjzsVRy8&ehbc=2E312F" width="600" height="350"></iframe>';
+                    break;
+                case "chennai":
+                    document.getElementById("result").innerHTML = '<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1l_jlEI6YriT3WPnPl4aM5ItkGhAy8eQ&ehbc=2E312F" width="600" height="350"></iframe>';
+                    break;
+                case "pune":
+                    document.getElementById("result").innerHTML = '<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1LFyJN8JdJKJnbPSEZi-W0gElu5K0eo8&ehbc=2E312F" width="600" height="350"></iframe>';
+                    break;
+                default:
+                    document.getElementById("result").innerHTML = "Drones are not yet available at your location";
+            }
+        }
+    </script>
+</body>
+</html>
